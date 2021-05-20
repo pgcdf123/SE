@@ -1,12 +1,19 @@
 import controller.UserController;
 import controller.impl.UserControllerImpl;
+import entity.RecruitmentList;
+import entity.TrainingList;
+import entity.User;
+import utils.FileLoader;
 import utils.JsonData;
+
+import java.util.List;
 
 public class UserTest {
     public static void main(String[] args) {
-
-        UserController controller = new UserControllerImpl();
-        controller.register(1,"123","123456");
-        controller.login("123","123456");
+        List<TrainingList> users=JsonData.GetCandidateTeacher();
+        for(TrainingList list:users)
+        {
+            System.out.println(list.getGUID());
+        }
     }
 }

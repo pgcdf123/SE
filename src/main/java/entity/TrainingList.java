@@ -1,14 +1,24 @@
 package entity;
 
+import java.util.List;
+
 public class TrainingList {
+    String GUID;
+    List<String>subject;
 
-    String trainingList;
-
-    public String getTrainingList() {
-        return trainingList;
+    public String getGUID() {
+        return GUID;
     }
 
-    public void setTrainingList(String trainingList) {
-        this.trainingList = trainingList;
+    public void setGUID(String GUID) {
+        this.GUID = GUID;
+    }
+
+    public List<String> getSubject() {
+        return subject;
+    }
+
+    public void setSubject(List<String> subject) {
+        this.subject = subject;
     }
 }

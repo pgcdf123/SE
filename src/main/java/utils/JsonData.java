@@ -10,49 +10,46 @@ import java.util.Properties;
 
 public class JsonData {
     private static List<entity.User> UserAccount=new LinkedList<entity.User>();
-    private static List<entity.userimpl.ClassDirector>ClassDirector=new LinkedList<entity.userimpl.ClassDirector>();
-    private static List<entity.userimpl.CandidateTeacher>CandidateTeacher=new LinkedList<entity.userimpl.CandidateTeacher>();
-    public static void PutJsonInMemory(String name,Class clazz)
+    private static List<entity.RecruitmentList>ClassDirector=new LinkedList<entity.RecruitmentList>();
+    private static List<entity.TrainingList>CandidateTeacher=new LinkedList<entity.TrainingList>();
+    public static<T> List<T> PutJsonInMemory(String name,Class T)
     {
+        List<T> tempList;
         try{
             Properties proTool=new Properties();
             proTool.load(new FileInputStream("src//main//Resources//path.properties"));
             String path=proTool.getProperty(name);
             String jsonStr="";
             jsonStr=FileLoader.getInstance().ReadFile(path);
-            System.out.println(jsonStr);
-            UserAccount= JSONArray.toList(JSONArray.fromObject(jsonStr), clazz);
-            for(entity.User user:UserAccount)
-            {
-                System.out.println(user.getGUID());
-            }
-
+            tempList=JSONArray.toList(JSONArray.fromObject(jsonStr), T);
         }catch(Exception e)
         {
             e.printStackTrace();
+            return null;
         }
+        return tempList;
     }
     public static List<entity.User> GetUserAccount()
     {
         if(UserAccount.isEmpty())
         {
-            PutJsonInMemory("Account", entity.User.class);
+            UserAccount=PutJsonInMemory("Account", entity.User.class);
         }
         return UserAccount;
     }
-    public static List<entity.userimpl.ClassDirector> GetClassDirector()
+    public static List<entity.RecruitmentList> GetClassDirector()
     {
         if(ClassDirector.isEmpty())
         {
-            PutJsonInMemory("Requirement", entity.userimpl.ClassDirector.class);
+            ClassDirector=PutJsonInMemory("Requirement", entity.RecruitmentList.class);
         }
         return ClassDirector;
     }
-    public static List<entity.userimpl.CandidateTeacher>GetCandidateTeacher()
+    public static List<entity.TrainingList>GetCandidateTeacher()
     {
         if(CandidateTeacher.isEmpty())
         {
-            PutJsonInMemory("Training", entity.userimpl.CandidateTeacher.class);
+            CandidateTeacher=PutJsonInMemory("Training", entity.TrainingList.class);
         }
         return CandidateTeacher;
     }

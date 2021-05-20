@@ -57,9 +57,44 @@ public class FileLoader {
         return true;
 
     }
+    /**下载requirment或者traininglist文件 到指定路径
+     * param:targetPath 存储文件的路径
+     * param TargetFilename 要下载的文件名只支持：Requirement or Traininglist*/
+    public boolean DownloadFile(String targetPath,String TargetFilename)
+    {
+        finalPath=ParpareStore(targetPath,TargetFilename);
+        try
+        {
+            writer=new FileWriter(finalPath);
+            Properties proTool=new Properties();
+            proTool.load(new FileInputStream("src//main//Resources//path.properties"));
+            String path=proTool.getProperty(TargetFilename);
+            FileReader fw=new FileReader(path);
+            char[] content=new char[1024];
+            String contents;
+            int len=0;
+            while((len=fw.read(content))!=-1)
+            {
+                contents=new String(content,0,len);
+                if(!StoreFile(contents))
+                {
+                    return false;
+                }
+            }
+            writer.close();
+            fw.close();
+        }
+        catch (Exception e)
+        {
+            System.out.println("Sorry,System wrong ,please contact us");
+            return false;
+        }
+        return true;
+    }
+    /**下载教学清单模板*/
     public  boolean DownloadTemplate(String targetPath)
     {
-        finalPath=ParpareStore(targetPath);
+        finalPath=ParpareStore(targetPath,"Requirement");
 
         try
         {
@@ -97,9 +132,9 @@ public class FileLoader {
         if(file.exists()){return  true;}
         else{return false;}
     }
-    private  String ParpareStore(String path)
+    private  String ParpareStore(String path,String FileTypeName)
     {
-        String name="RequirementTemplate.txt";
+        String name=FileTypeName+".txt";
         int filenumber=0;
         File file=new File(path);
         if(file.exists())
