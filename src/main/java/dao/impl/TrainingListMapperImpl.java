@@ -8,7 +8,7 @@ import utils.JsonData;
 public class TrainingListMapperImpl implements TrainingListMapper {
 
 
-    public void uoloadTrainingList(TrainingList trainingList) {
+    public void uploadTrainingList(TrainingList trainingList) {
         JsonData.GetCandidateTeacher().add(trainingList);
     }
 
