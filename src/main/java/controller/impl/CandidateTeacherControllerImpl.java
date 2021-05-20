@@ -5,6 +5,7 @@ import entity.TrainingList;
 import service.impl.CandidateTeacherServiceImpl;
 import service.CandidateTeacherService;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class CandidateTeacherControllerImpl implements CandidateTeacherController {
@@ -12,21 +13,10 @@ public class CandidateTeacherControllerImpl implements CandidateTeacherControlle
     CandidateTeacherService candidateTeacherService = new CandidateTeacherServiceImpl();
 
     @Override
-    public void enterApplication(){
-        Application application = new Application();
-        System.out.println("Creating a new application...\nPlease enter your GUID:");
-        Scanner sc = new Scanner(System.in);
-        application.setGUID(sc.nextInt());
-        System.out.println("Please enter your expected salary:");
-        application.setExpectedsalary(sc.nextInt());
-
-        candidateTeacherService.submitApplication(application);
-    }
-
-    @Override
     public void showTrainingList(){
-        CandidateTeacherServiceImpl candidateTeacherServiceImpl = new CandidateTeacherServiceImpl();
-        TrainingList trainingList = candidateTeacherServiceImpl.downloadTrainingList();
-        System.out.println("Your training list is: " + trainingList.getTrainingList());
+        TrainingList trainingList = candidateTeacherService.downloadTrainingList();
+        List<String> subject = trainingList.getSubject();
+        System.out.println("Your training list is:");
+        for(subject)
     }
 }
