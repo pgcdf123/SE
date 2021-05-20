@@ -4,7 +4,7 @@ import entity.TrainingList;
 
 public interface TrainingListMapper {
 
-    void uoloadTrainingList(TrainingList trainingList);
+    void uploadTrainingList(TrainingList trainingList);
 
     TrainingList downloadTrainingList(String GUID);
     void downloadAllTraining();

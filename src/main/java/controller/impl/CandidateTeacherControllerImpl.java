@@ -17,6 +17,8 @@ public class CandidateTeacherControllerImpl implements CandidateTeacherControlle
         TrainingList trainingList = candidateTeacherService.downloadTrainingList();
         List<String> subject = trainingList.getSubject();
         System.out.println("Your training list is:");
-        for(subject)
+        for(String it:subject){
+            System.out.println(it);
+        }
     }
 }
