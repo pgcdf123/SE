@@ -3,10 +3,14 @@ package controller.impl;
 import controller.ClassDirectorController;
 import entity.RecruitmentList;
 import service.impl.ClassDirectorServiceImpl;
+import service.ClassDirectorService;
 
 import java.util.Scanner;
 
 public class ClassDirectorControllerImpl implements ClassDirectorController {
+
+    ClassDirectorService classDirectorService = new ClassDirectorServiceImpl();
+
     @Override
     public void enterRecruitmentList(){
         RecruitmentList recruitmentList = new RecruitmentList();
@@ -16,7 +20,6 @@ public class ClassDirectorControllerImpl implements ClassDirectorController {
         System.out.println("Please enter the Requirements:");
         recruitmentList.setRequirement(sc.nextLine());
 
-        ClassDirectorServiceImpl classDirectorServiceImpl = new ClassDirectorServiceImpl();
-        classDirectorServiceImpl.uploadRecruitmentList(recruitmentList);
+        classDirectorService.uploadRecruitmentList(recruitmentList);
     }
 }

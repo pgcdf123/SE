@@ -1,4 +1,6 @@
 package view.impl;
 
-public class CandidateTeacherViewImpl {
+import view.CandidateTeacherView;
+
+public class CandidateTeacherViewImpl implements CandidateTeacherView {
 }

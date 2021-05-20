@@ -11,10 +11,12 @@ public class CandidateTeacherServiceImpl implements CandidateTeacherService {
 
     ApplicationMapper applicationMapper = new ApplicationMapperImpl();
     TrainingListMapperImpl trainingListMapperImpl = new TrainingListMapperImpl();
+
     @Override
     public void submitApplication(Application application) {
         applicationMapper.submitApplication(application);
     }
+
     @Override
     public TrainingList downloadTrainingList(){
         return trainingListMapperImpl.downloadTrainingList();
