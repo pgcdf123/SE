@@ -10,7 +10,7 @@ public class FileLoader {
     private final String templateKey="template";
     private static FileLoader instance = new FileLoader();
     private FileLoader(){}
-    private final String SavingPath="/Users/macbook/Desktop/database";
+    private final String SavingPath="//Users//macbook//Desktop//database";
     public static FileLoader getInstance(){
         return instance;
     }
@@ -19,15 +19,15 @@ public class FileLoader {
     private  FileReader fileReader;
     /**上传文件默认为一个硬盘固定文件D：Requirement文件夹
      * */
-    public boolean UpdateFile(String Sourcepath,String GUID,String TargetPath)
+    public boolean UpdateFilewithGUID(String Sourcepath,String GUID,String typeName)
     {
         if(!IsFileExisted(Sourcepath))
         {
             System.out.println("path is wrong");
             return false;
         }
-        String name=GUID+" "+"Requirement.txt";
-        File file=new File(SavingPath);
+        String name=GUID+" "+typeName +".txt";
+        File file=new File(SavingPath+"//"+typeName);
         if(!file.exists())
         {
             file.mkdir();
@@ -36,7 +36,7 @@ public class FileLoader {
             fileReader=new FileReader(Sourcepath);
             char[] content=new char[1024];
             int len=0;
-            writer=new FileWriter(SavingPath+"//"+name);
+            writer=new FileWriter(SavingPath+"//"+typeName+"//"+name);
             String contents;
             while((len=fileReader.read(content))!=-1)
             {
@@ -92,7 +92,7 @@ public class FileLoader {
         return true;
     }
     /**下载教学清单模板*/
-    public  boolean DownloadTemplate(String targetPath)
+    /**public  boolean DownloadTemplate(String targetPath)
     {
         finalPath=ParpareStore(targetPath,"Requirement");
 
@@ -123,7 +123,7 @@ public class FileLoader {
             return false;
         }
         return true;
-    }
+    }**/
     /**检测文件重复
      * */
     private boolean IsFileExisted(String path)

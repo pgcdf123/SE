@@ -2,6 +2,7 @@ package dao.impl;
 
 import dao.UserMapper;
 import entity.User;
+import entity.userimpl.ClassDirector;
 import utils.JsonData;
 
 public class UserMapperImpl implements UserMapper {

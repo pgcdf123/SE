@@ -6,11 +6,25 @@ import utils.JsonData;
 
 public class RecruitmentListMapperImpl implements RecruitmentListMapper {
 
-    public void uploadRecruitmentList(RecruitmentList recruitmentList, String path) {
-        JsonData.GetClassDirector()
+    public void uploadRecruitmentList(RecruitmentList recruitmentList) {
+
+        JsonData.GetClassDirector().add(recruitmentList);
     }
 
-    public RecruitmentList downloadRecruitmentList() {
-        return null;
+    public RecruitmentList downloadRecruitmentList(String GUID)
+    {
+        RecruitmentList temp=null;
+        for(RecruitmentList list:JsonData.GetClassDirector())
+        {
+            if(list.equals(GUID))
+            {
+                temp=list;
+            }
+        }
+        return temp;
+    }
+    public void downloadAll()
+    {
+        JsonData.commit();
     }
 }
