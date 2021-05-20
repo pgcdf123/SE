@@ -6,7 +6,7 @@ import entity.TrainingList;
 public class TrainingListMapperImpl implements TrainingListMapper {
 
     @Override
-    public void uoloadTrainingList(TrainingList trainingList) {
+    public void uploadTrainingList(TrainingList trainingList) {
 
     }
 
