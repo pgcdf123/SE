@@ -6,5 +6,7 @@ public interface TrainingListMapper {
 
     void uoloadTrainingList(TrainingList trainingList);
 
-    TrainingList downloadTrainingList();
+    TrainingList downloadTrainingList(String GUID);
+    void downloadAllTraining();
+
 }
