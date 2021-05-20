@@ -44,11 +44,14 @@ public class UserControllerImpl implements UserController {
     }
 
     @Override
-    public void login(String GUID, String password) {
-        if(userMapper.findByGUID(GUID) != null){
+    public User login(String GUID, String password) {
+        User user = userMapper.findByGUID(GUID);
+        if(user != null){
             System.out.println("welcome");
+            return user;
         }else{
             System.out.println("false");
+            return null;
         }
     }
 }
