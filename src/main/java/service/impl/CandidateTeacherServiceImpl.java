@@ -1,7 +1,5 @@
 package service.impl;
 
-import dao.ApplicationMapper;
-import dao.impl.ApplicationMapperImpl;
 import dao.impl.TrainingListMapperImpl;
 import entity.TrainingList;
 import service.CandidateTeacherService;

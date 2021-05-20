@@ -5,6 +5,7 @@ import entity.TrainingList;
 import service.impl.CandidateTeacherServiceImpl;
 import service.CandidateTeacherService;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class CandidateTeacherControllerImpl implements CandidateTeacherController {
@@ -14,6 +15,8 @@ public class CandidateTeacherControllerImpl implements CandidateTeacherControlle
     @Override
     public void showTrainingList(){
         TrainingList trainingList = candidateTeacherService.downloadTrainingList();
-        System.out.println("Your training list is: " + trainingList.getTrainingList());
+        List<String> subject = trainingList.getSubject();
+        System.out.println("Your training list is:");
+        for(subject)
     }
 }
