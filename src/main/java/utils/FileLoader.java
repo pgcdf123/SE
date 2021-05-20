@@ -19,7 +19,7 @@ public class FileLoader {
     private  FileReader fileReader;
     /**上传文件默认为一个硬盘固定文件D：Requirement文件夹
      * */
-    public boolean UpdateFile(String Sourcepath,String GUID)
+    public boolean UpdateFile(String Sourcepath,String GUID,String TargetPath)
     {
         if(!IsFileExisted(Sourcepath))
         {

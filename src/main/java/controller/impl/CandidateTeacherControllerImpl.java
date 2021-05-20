@@ -1,7 +1,6 @@
 package controller.impl;
 
 import controller.CandidateTeacherController;
-import entity.Application;
 import entity.TrainingList;
 import service.impl.CandidateTeacherServiceImpl;
 import service.CandidateTeacherService;

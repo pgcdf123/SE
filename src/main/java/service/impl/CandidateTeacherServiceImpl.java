@@ -21,4 +21,3 @@ public class CandidateTeacherServiceImpl implements CandidateTeacherService {
     public TrainingList downloadTrainingList(){
         return trainingListMapperImpl.downloadTrainingList();
     }
-}

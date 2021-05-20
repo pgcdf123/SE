@@ -5,7 +5,6 @@ import entity.User;
 import utils.JsonData;
 
 public class UserMapperImpl implements UserMapper {
-    @Override
     public boolean addUser(User user) {
         try
         {
@@ -17,8 +16,6 @@ public class UserMapperImpl implements UserMapper {
         }
         return true;
     }
-
-    @Override
     public User findByGUID(String GUID) {
         User userInformation=null;
         for(User eachuser : JsonData.GetUserAccount())

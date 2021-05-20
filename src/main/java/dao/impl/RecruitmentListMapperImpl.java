@@ -2,15 +2,14 @@ package dao.impl;
 
 import dao.RecruitmentListMapper;
 import entity.RecruitmentList;
+import utils.JsonData;
 
 public class RecruitmentListMapperImpl implements RecruitmentListMapper {
 
-    @Override
-    public void uploadRecruitmentList(RecruitmentList recruitmentList) {
-
+    public void uploadRecruitmentList(RecruitmentList recruitmentList, String path) {
+        JsonData.GetClassDirector()
     }
 
-    @Override
     public RecruitmentList downloadRecruitmentList() {
         return null;
     }

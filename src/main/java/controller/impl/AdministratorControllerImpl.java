@@ -12,12 +12,12 @@ public class AdministratorControllerImpl implements AdministratorController {
 
     AdministratorService administratorService = new AdministratorServiceImpl();
 
-    @Override
+
     public RecruitmentList downloadRecruitmentList() {
         return administratorService.downloadRecruitmentList();
     }
 
-    @Override
+
     public CandidateTeacher chooseCandidateTeacher(String GUID) {
         return administratorService.chooseCandidateTeacher(GUID);
     }

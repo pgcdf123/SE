@@ -17,7 +17,6 @@ public class TrainingList {
     public List<String> getSubject() {
         return subject;
     }
-
     public void setSubject(List<String> subject) {
         this.subject = subject;
     }

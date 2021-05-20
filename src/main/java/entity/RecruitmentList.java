@@ -2,24 +2,22 @@ package entity;
 
 public class RecruitmentList {
 
-    private String subject;
-    private String requirement;
+    private String GUID;
+    private boolean Submit;
 
-
-    public String getSubject() {
-        return subject;
+    public String getGUID() {
+        return GUID;
     }
 
-    public void setSubject(String subject) {
-        this.subject = subject;
+    public void setGUID(String GUID) {
+        this.GUID = GUID;
     }
 
-    public String getRequirement() {
-        return requirement;
+    public boolean isSubmit() {
+        return Submit;
     }
 
-    public void setRequirement(String requirement) {
-        this.requirement = requirement;
+    public void setSubmit(boolean submit) {
+        Submit = submit;
     }
-
 }
