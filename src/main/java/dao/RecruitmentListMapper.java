@@ -4,8 +4,9 @@ import entity.RecruitmentList;
 
 public interface RecruitmentListMapper {
 
-    void uploadRecruitmentList(RecruitmentList recruitmentList,String path);
+    void uploadRecruitmentList(RecruitmentList recruitmentList);
 
-    RecruitmentList downloadRecruitmentList();
+    RecruitmentList downloadRecruitmentList(String GUID);
+    void downloadAll();
 
 }

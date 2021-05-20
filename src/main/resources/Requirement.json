@@ -1,38 +1,38 @@
 [
         {
             "GUID": "00001",
-            "Submit":false
+            "Submit":"kind"
         },
         {
             "GUID": "00002",
-            "Submit":false
+            "Submit":"kind"
         },
         {
             "GUID": "00003",
-            "Submit":false
+            "Submit":"kind "
         },
         {
             "GUID": "00004",
-            "Submit":false
+            "Submit":"kind"
         },
         {
             "GUID": "00005",
-            "Submit":false
+            "Submit":"kind"
         },
         {
             "GUID": "00006",
-            "Submit":false
+            "Submit":"kind"
         },
         {
             "GUID": "00007",
-            "Submit":false
+            "Submit":"kind"
         },
         {
             "GUID": "00008",
-            "Submit":false
+            "Submit":"kind"
         },
         {
             "GUID": "00009",
-            "Submit":false
+            "Submit":"kind"
         }
 ]
