@@ -5,6 +5,6 @@ import entity.TrainingList;
 
 public interface CandidateTeacherService {
 
-    TrainingList downloadTrainingList();
+    TrainingList downloadTrainingList(String GUID);
 
 }
