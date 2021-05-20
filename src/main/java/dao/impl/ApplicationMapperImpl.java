@@ -1,7 +1,6 @@
 package dao.impl;
 
 import dao.ApplicationMapper;
-import entity.Application;
 
 public class ApplicationMapperImpl implements ApplicationMapper {
     @Override
