@@ -3,7 +3,7 @@ package entity;
 public class RecruitmentList {
 
     private String GUID;
-    private boolean Submit;
+    private String Subject;
 
     public String getGUID() {
         return GUID;
@@ -13,11 +13,11 @@ public class RecruitmentList {
         this.GUID = GUID;
     }
 
-    public boolean isSubmit() {
-        return Submit;
+    public String getSubject() {
+        return Subject;
     }
 
-    public void setSubmit(boolean submit) {
-        Submit = submit;
+    public void setSubject(String subject) {
+        Subject = subject;
     }
 }
