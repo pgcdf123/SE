@@ -1,6 +1,6 @@
 package entity;
 
-public abstract class User{
+public class User{
     private int id;
     private String GUID;
     private String password;
