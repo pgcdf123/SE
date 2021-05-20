@@ -16,8 +16,8 @@ public class UserTest {
     public static void main(String[] args) {
         UserMapper user=new UserMapperImpl();
         User us=new ClassDirector();
-        us.setPassword("7878");
-        us.setGUID("0058");
+        us.setPassword("888");
+        us.setGUID("0098");
         us.setId(1);
         user.addUser(us);
         JsonData.commit();

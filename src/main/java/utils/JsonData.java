@@ -1,5 +1,8 @@
 package utils;
 
+import entity.RecruitmentList;
+import entity.TrainingList;
+import entity.User;
 import net.sf.json.JSONArray;
 
 import java.io.FileInputStream;
@@ -9,9 +12,9 @@ import java.util.Properties;
 
 
 public class JsonData {
-    private static List<entity.User> UserAccount=new LinkedList<entity.User>();
-    private static List<entity.RecruitmentList>ClassDirector=new LinkedList<entity.RecruitmentList>();
-    private static List<entity.TrainingList>CandidateTeacher=new LinkedList<entity.TrainingList>();
+    private static List<User> UserAccount=new LinkedList<User>();
+    private static List<RecruitmentList>ClassDirector=new LinkedList<RecruitmentList>();
+    private static List<TrainingList>CandidateTeacher=new LinkedList<TrainingList>();
     public static<T> List<T> PutJsonInMemory(String name,Class T)
     {
         List<T> tempList;
@@ -33,7 +36,7 @@ public class JsonData {
     {
         if(UserAccount.isEmpty())
         {
-            UserAccount=PutJsonInMemory("Account", entity.User.class);
+            UserAccount=PutJsonInMemory("Account", User.class);
         }
         return UserAccount;
     }
