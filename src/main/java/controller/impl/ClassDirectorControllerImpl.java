@@ -7,6 +7,7 @@ import service.impl.ClassDirectorServiceImpl;
 import java.util.Scanner;
 
 public class ClassDirectorControllerImpl implements ClassDirectorController {
+    @Override
     public void enterRecruitmentList(){
         RecruitmentList recruitmentList = new RecruitmentList();
         Scanner sc = new Scanner(System.in);

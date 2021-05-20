@@ -8,7 +8,7 @@ import service.impl.CandidateTeacherServiceImpl;
 import java.util.Scanner;
 
 public class CandidateTeacherControllerImpl implements CandidateTeacherController {
-
+    @Override
     public void enterApplication(){
         Application application = new Application();
         System.out.println("Creating a new application...\nPlease enter your GUID:");
@@ -20,6 +20,7 @@ public class CandidateTeacherControllerImpl implements CandidateTeacherControlle
         CandidateTeacherServiceImpl candidateTeacherServiceImpl = new CandidateTeacherServiceImpl();
         candidateTeacherServiceImpl.submitApplication(application);
     }
+    @Override
     public void showTrainingList(){
         CandidateTeacherServiceImpl candidateTeacherServiceImpl = new CandidateTeacherServiceImpl();
         TrainingList trainingList = candidateTeacherServiceImpl.downloadTrainingList();
