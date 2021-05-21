@@ -10,6 +10,7 @@ public class CandidateTeacherServiceImpl implements CandidateTeacherService {
 
 
     @Override
-    public TrainingList downloadTrainingList(){
-        return trainingListMapperImpl.downloadTrainingList();
+    public TrainingList downloadTrainingList(String GUID) {
+        return trainingListMapperImpl.downloadTrainingList(GUID);
     }
+}

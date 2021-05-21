@@ -31,7 +31,7 @@ public class AdministratorServiceImpl implements AdministratorService {
 
     @Override
     public void uploadTrainingList(TrainingList trainingList) {
-        trainingListMapper.uoloadTrainingList(trainingList);
+        trainingListMapper.uploadTrainingList(trainingList);
     }
 
     @Override
