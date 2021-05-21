@@ -9,7 +9,6 @@ public class ClassDirectorServiceImpl implements service.ClassDirectorService {
 
     RecruitmentListMapper recruitmentListMapper = new RecruitmentListMapperImpl();
 
-    @Override
     public void uploadRecruitmentList(RecruitmentList recruitmentList) {
         recruitmentListMapper.uploadRecruitmentList(recruitmentList);
         JsonData.commit();

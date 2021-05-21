@@ -15,7 +15,7 @@ public class UserControllerImpl implements UserController {
     UserService userService = new UserServiceImpl();
     UserMapper userMapper = new UserMapperImpl();
 
-    @Override
+
     public void register(int id, String GUID, String password) {
         if(id == 1){
             User user = new Administrator();
@@ -43,7 +43,7 @@ public class UserControllerImpl implements UserController {
         }
     }
 
-    @Override
+
     public User login(String GUID, String password) {
         User user = userMapper.findByGUID(GUID);
         if(user != null){
