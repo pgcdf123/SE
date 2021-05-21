@@ -10,7 +10,7 @@ import service.impl.AdministratorServiceImpl;
 
 public class AdministratorControllerImpl implements AdministratorController {
 
-   /** AdministratorService administratorService = new AdministratorServiceImpl();
+    AdministratorService administratorService = new AdministratorServiceImpl();
 
 
     public RecruitmentList downloadRecruitmentList() {
@@ -30,5 +30,5 @@ public class AdministratorControllerImpl implements AdministratorController {
 
     public TrainingList downloadTrainingList() {
         return administratorService.downloadTrainingList();
-    }*/
+    }
 }

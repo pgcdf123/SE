@@ -18,7 +18,7 @@ public class ClassDirectorControllerImpl implements ClassDirectorController {
     }
 
 
-   /** public void enterRecruitmentList(){
+    public void enterRecruitmentList(){
         RecruitmentList recruitmentList = new RecruitmentList();
         Scanner sc = new Scanner(System.in);
         System.out.println("Creating a new recruitment list...\nPlease enter the Subject:");
@@ -26,5 +26,5 @@ public class ClassDirectorControllerImpl implements ClassDirectorController {
         recruitmentList.setGUID(user.getGUID());
 
         classDirectorService.uploadRecruitmentList(recruitmentList);
-    }*/
+    }
 }

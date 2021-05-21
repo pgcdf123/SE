@@ -10,7 +10,7 @@ import java.util.List;
 
 public class CandidateTeacherControllerImpl implements CandidateTeacherController {
 
-    /**CandidateTeacherService candidateTeacherService = new CandidateTeacherServiceImpl();
+    CandidateTeacherService candidateTeacherService = new CandidateTeacherServiceImpl();
     private User user;
 
     public CandidateTeacherControllerImpl(User user){
@@ -24,5 +24,5 @@ public class CandidateTeacherControllerImpl implements CandidateTeacherControlle
         for(String it:subject){
             System.out.println(it);
         }
-    }*/
+    }
 }
