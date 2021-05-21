@@ -20,8 +20,8 @@ public class AdministratorServiceImpl implements AdministratorService {
 
     @Override
     public RecruitmentList downloadRecruitmentList() {
-
-        return recruitmentListMapper.downloadRecruitmentList();
+        return null;
+        //return recruitmentListMapper.downloadRecruitmentList();
     }
 
     @Override
@@ -36,7 +36,8 @@ public class AdministratorServiceImpl implements AdministratorService {
 
     @Override
     public TrainingList downloadTrainingList() {
-        return trainingListMapper.downloadTrainingList();
+        return null;
+        //return trainingListMapper.downloadTrainingList();
     }
 
 }
