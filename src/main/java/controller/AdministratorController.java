@@ -6,12 +6,12 @@ import entity.userimpl.CandidateTeacher;
 
 public interface AdministratorController {
 
-    RecruitmentList downloadRecruitmentList();
+   /** RecruitmentList downloadRecruitmentList();
 
     CandidateTeacher chooseCandidateTeacher(String GUID);
 
     void uploadTrainingList(TrainingList trainingList);
 
     TrainingList downloadTrainingList();
-
+*/
 }

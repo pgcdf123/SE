@@ -1,5 +1,5 @@
 package controller;
 
 public interface CandidateTeacherController {
-    public void showTrainingList();
+  /**  public void showTrainingList();*/
 }
