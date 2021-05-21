@@ -17,7 +17,6 @@ public class CandidateTeacherControllerImpl implements CandidateTeacherControlle
         this.user = user;
     }
 
-    @Override
     public void showTrainingList(){
         TrainingList trainingList = candidateTeacherService.downloadTrainingList(user.getGUID());
         List<String> subject = trainingList.getSubject();

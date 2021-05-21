@@ -22,12 +22,12 @@ public class AdministratorControllerImpl implements AdministratorController {
         return administratorService.chooseCandidateTeacher(GUID);
     }
 
-    @Override
+
     public void uploadTrainingList(TrainingList trainingList) {
         administratorService.uploadTrainingList(trainingList);
     }
 
-    @Override
+
     public TrainingList downloadTrainingList() {
         return administratorService.downloadTrainingList();
     }

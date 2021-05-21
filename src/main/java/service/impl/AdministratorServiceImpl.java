@@ -18,23 +18,20 @@ public class AdministratorServiceImpl implements AdministratorService {
     TrainingListMapper trainingListMapper = new TrainingListMapperImpl();
 
 
-    @Override
     public RecruitmentList downloadRecruitmentList() {
         return null;
         //return recruitmentListMapper.downloadRecruitmentList();
     }
 
-    @Override
     public CandidateTeacher chooseCandidateTeacher(String GUID) {
         return (CandidateTeacher) userMapper.findByGUID(GUID);
     }
 
-    @Override
+
     public void uploadTrainingList(TrainingList trainingList) {
         trainingListMapper.uploadTrainingList(trainingList);
     }
 
-    @Override
     public TrainingList downloadTrainingList() {
         return null;
         //return trainingListMapper.downloadTrainingList();

@@ -6,7 +6,7 @@ import entity.userimpl.CandidateTeacher;
 
 public interface AdministratorController {
 
-    RecruitmentList downloadRecruitmentList();
+   RecruitmentList downloadRecruitmentList();
 
     CandidateTeacher chooseCandidateTeacher(String GUID);
 
