@@ -61,29 +61,29 @@ public class JsonData {
     {
       if(JsonData.toJSON(JsonData.GetUserAccount(),"Account"))
         {
-            System.out.println("update Account information successfully");
+//            System.out.println("update Account information successfully");
         }
       else
           {
-              System.out.println("some thing wrong with Account Information");
+//              System.out.println("some thing wrong with Account Information");
               return false;
           }
         if(JsonData.toJSON(JsonData.GetClassDirector(),"Requirement"))
         {
-            System.out.println("update ClassDirector information successfully");
+//            System.out.println("update ClassDirector information successfully");
         }
         else
         {
-            System.out.println("some thing wrong with ClassDirector Information");
+//            System.out.println("some thing wrong with ClassDirector Information");
             return false;
         }
         if(JsonData.toJSON(JsonData.GetCandidateTeacher(),"Training"))
         {
-            System.out.println("update CandidateTeacher information successfully");
+//            System.out.println("update CandidateTeacher information successfully");
         }
         else
         {
-            System.out.println("some thing wrong with CandidateTeacher Information");
+//            System.out.println("some thing wrong with CandidateTeacher Information");
             return false;
         }
         return true;

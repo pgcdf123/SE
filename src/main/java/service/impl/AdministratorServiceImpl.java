@@ -10,6 +10,7 @@ import entity.RecruitmentList;
 import entity.TrainingList;
 import entity.userimpl.CandidateTeacher;
 import service.AdministratorService;
+import utils.JsonData;
 
 public class AdministratorServiceImpl implements AdministratorService {
 
@@ -19,9 +20,9 @@ public class AdministratorServiceImpl implements AdministratorService {
 
 
     @Override
-    public RecruitmentList downloadRecruitmentList() {
+    public RecruitmentList downloadRecruitmentList(String GUID) {
 
-        return recruitmentListMapper.downloadRecruitmentList();
+        return recruitmentListMapper.downloadRecruitmentList(GUID);
     }
 
     @Override
@@ -31,12 +32,14 @@ public class AdministratorServiceImpl implements AdministratorService {
 
     @Override
     public void uploadTrainingList(TrainingList trainingList) {
+
         trainingListMapper.uploadTrainingList(trainingList);
+        JsonData.commit();
     }
 
     @Override
-    public TrainingList downloadTrainingList() {
-        return trainingListMapper.downloadTrainingList();
+    public TrainingList downloadTrainingList(String GUID) {
+        return trainingListMapper.downloadTrainingList(GUID);
     }
 
 }

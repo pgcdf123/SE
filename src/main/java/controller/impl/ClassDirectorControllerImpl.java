@@ -17,7 +17,6 @@ public class ClassDirectorControllerImpl implements ClassDirectorController {
         this.user = user;
     }
 
-    @Override
     public void enterRecruitmentList(){
         RecruitmentList recruitmentList = new RecruitmentList();
         Scanner sc = new Scanner(System.in);
