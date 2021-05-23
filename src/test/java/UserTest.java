@@ -40,6 +40,8 @@ public class UserTest {
          */
         UserController userController = new UserControllerImpl();
         userController.register(1,"glasgow","123456");
+        //login
+        userController.login("glasgow","123456");
 
         /**
          * teacher
