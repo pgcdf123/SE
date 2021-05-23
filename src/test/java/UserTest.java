@@ -1,23 +1,4 @@
-import controller.CandidateTeacherController;
-import controller.ClassDirectorController;
-import controller.UserController;
-import controller.impl.AdministratorControllerImpl;
-import controller.impl.CandidateTeacherControllerImpl;
-import controller.impl.ClassDirectorControllerImpl;
-import controller.impl.UserControllerImpl;
-import dao.UserMapper;
-import dao.impl.RecruitmentListMapperImpl;
-import dao.impl.UserMapperImpl;
-import entity.RecruitmentList;
-import entity.TrainingList;
-import entity.User;
-import entity.userimpl.Administrator;
-import entity.userimpl.CandidateTeacher;
-import entity.userimpl.ClassDirector;
-import service.impl.ClassDirectorServiceImpl;
-import utils.FileLoader;
 import utils.JsonData;
-import controller.AdministratorController;
 import view.AdministratorView;
 import view.CandidateTeacherView;
 import view.ClassDirectorView;
@@ -50,24 +31,24 @@ public class UserTest {
         /**
          * userservice
          */
-        //UserView userview=new UserViewImp();
-        //userview.register(1,"glasgow","123456");
+        UserView userview=new UserViewImp();
+        userview.register(1,"glasgow","123456");
         //login
-        //userview.login("glasgow","123456");
+        userview.login("glasgow","123456");
 
         /**
          * teacher
          */
-       // CandidateTeacherView CandidateView = new CandidateTeacherViewImpl("00013");
-       // CandidateView.showTrainingList();
+        CandidateTeacherView CandidateView = new CandidateTeacherViewImpl("00013");
+        CandidateView.showTrainingList();
         /**
          * Administrator
          */
-         //List<String> mList = new ArrayList<String>();
-        // mList.add("math");
-        // AdministratorView administratorView = new AdministratorViewImp();
-        // administratorView.uploadTrainingList("00015",mList);
-         //administratorView.downloadTrainingList("00015");
+         List<String> mList = new ArrayList<String>();
+         mList.add("math");
+         AdministratorView administratorView = new AdministratorViewImp();
+         administratorView.uploadTrainingList("00015",mList);
+         administratorView.downloadTrainingList("00015");
 
         /**Class Director:
          * upload requirement*/
