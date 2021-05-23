@@ -4,7 +4,6 @@ import controller.ClassDirectorController;
 import controller.impl.ClassDirectorControllerImpl;
 import entity.RecruitmentList;
 import utils.JsonData;
-import view.ClassDirectorView;
 
 public class ClassDirectorViewImpl implements ClassDirectorView {
     ClassDirectorController classDirectorController;

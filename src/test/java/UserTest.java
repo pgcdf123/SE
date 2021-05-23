@@ -1,8 +1,4 @@
 import utils.JsonData;
-import view.AdministratorView;
-import view.CandidateTeacherView;
-import view.ClassDirectorView;
-import view.UserView;
 import view.impl.AdministratorViewImp;
 import view.impl.CandidateTeacherViewImpl;
 import view.impl.ClassDirectorViewImpl;
@@ -31,7 +27,7 @@ public class UserTest {
         /**
          * userservice
          */
-        UserView userview=new UserViewImp();
+        UserViewImp userview=new UserViewImp();
         userview.register(1,"glasgow","123456");
         //login
         userview.login("glasgow","123456");
@@ -39,20 +35,20 @@ public class UserTest {
         /**
          * teacher
          */
-        CandidateTeacherView CandidateView = new CandidateTeacherViewImpl("00013");
+        CandidateTeacherViewImpl CandidateView = new CandidateTeacherViewImpl("00013");
         CandidateView.showTrainingList();
         /**
          * Administrator
          */
          List<String> mList = new ArrayList<String>();
          mList.add("math");
-         AdministratorView administratorView = new AdministratorViewImp();
+        AdministratorViewImp administratorView = new AdministratorViewImp();
          administratorView.uploadTrainingList("00015",mList);
          administratorView.downloadTrainingList("00015");
 
         /**Class Director:
          * upload requirement*/
-        ClassDirectorView classDirectorView=new ClassDirectorViewImpl("00006");
+        ClassDirectorViewImpl classDirectorView=new ClassDirectorViewImpl("00006");
         classDirectorView.enterRecruitmentList();
     }
 }

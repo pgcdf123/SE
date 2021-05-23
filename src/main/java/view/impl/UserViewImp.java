@@ -2,7 +2,6 @@ package view.impl;
 
 import controller.UserController;
 import controller.impl.UserControllerImpl;
-import view.UserView;
 
 public class UserViewImp implements UserView {
     private UserController userController = new UserControllerImpl();

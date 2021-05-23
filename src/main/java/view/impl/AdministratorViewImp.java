@@ -3,7 +3,7 @@ package view.impl;
 import controller.AdministratorController;
 import controller.impl.AdministratorControllerImpl;
 import entity.TrainingList;
-import view.AdministratorView;
+
 import java.util.List;
 
 public class AdministratorViewImp implements AdministratorView {

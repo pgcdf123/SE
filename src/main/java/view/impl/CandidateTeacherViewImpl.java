@@ -2,7 +2,6 @@ package view.impl;
 
 import controller.CandidateTeacherController;
 import controller.impl.CandidateTeacherControllerImpl;
-import view.CandidateTeacherView;
 
 import java.util.List;
 
