@@ -32,51 +32,21 @@ public class UserTest {
      * All information will be stored in these three list unitl the System closed or using the method JsonData.commit
      * to load all information into json doc.
      * */
-    public void Start()
-    {
-        JsonData.GetCandidateTeacher();
-        JsonData.GetClassDirector();
-        JsonData.GetUserAccount();
-    }
-    /**Write all data into json*/
-    public void Commit()
-    {
-        JsonData.commit();
-    }
-    /**User:
-     *  register*/
-    @Test
-    public void userRegister()
-    {
-        Start();
+    public static void main(String[] args) {
+        /**
+         * userservice
+         */
         UserController userController = new UserControllerImpl();
         userController.register(1,"glasgow","123456");
-        Commit();
-    }
-    /**User:Login*/
-    @Test
-    public void login()
-    {
-        Start();
-        UserController userController = new UserControllerImpl();
-        userController.login("glasgow","123456");
 
-    }
-    /**teacher:
-     * showTrainingList*/
-    @Test
-    public void showTrainingList()
-    {
-        Start();
+        /**
+         * teacher
+         */
         CandidateTeacherController candidateTeacherController = new CandidateTeacherControllerImpl("00013");
         candidateTeacherController.showTrainingList();
-    }
-    /**Administrator:
-     * Design a training list for a certain Teacher*/
-    @Test
-    public void designTrainingList()
-    {
-        Start();
+        /**
+         * Administrator
+         */
         AdministratorController administratorController = new AdministratorControllerImpl();
         TrainingList mTrainingList = new TrainingList();
         mTrainingList.setGUID("glasgow_2");
@@ -84,46 +54,14 @@ public class UserTest {
         mList.add("math");
         mTrainingList.setSubject(mList);
         administratorController.uploadTrainingList(mTrainingList);
-        administratorController.downloadTrainingList("glasgow_2");
-        Commit();
-    }
-    /**ClassDiretor:
-     * Upload the Requirement*/
-    @Test
-    public void uploadRequirement()
-    {
-        Start();
+        administratorController.downloadTrainingList("glasgow");
+        /**Class Director*/
         ClassDirectorController classDirectorController=new ClassDirectorControllerImpl();
         classDirectorController.enterRecruitmentList();
         for(RecruitmentList directors:JsonData.GetClassDirector())
         {
             System.out.println(directors.getSubject()+" "+"The quantity: "+directors.getQuantity());
         }
-        Commit();
-    }
-    /***
-    public static void main(String[] args) {
-        /**
-         * userservice
-         */
-//        UserController userController = new UserControllerImpl();
-//        userController.register(1,"glasgow","123456");
 
-        /**
-         * teacher
-         */
-//        CandidateTeacherController candidateTeacherController = new CandidateTeacherControllerImpl(userController.login("00008",""));
-//        candidateTeacherController.showTrainingList();
-        /**
-         * Administrator
-         */
-        AdministratorController administratorController = new AdministratorControllerImpl();
-//        TrainingList mTrainingList = new TrainingList();
-//        mTrainingList.setGUID("glasgow_2");
-//        List<String> mList = new ArrayList<String>();
-//        mList.add("math");
-//        mTrainingList.setSubject(mList);
-//        administratorController.uploadTrainingList(mTrainingList);
-       /** administratorController.downloadTrainingList("glasgow");
-    }*/
+    }
 }
