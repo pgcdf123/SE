@@ -101,4 +101,29 @@ public class UserTest {
         }
         Commit();
     }
+    /***
+    public static void main(String[] args) {
+        /**
+         * userservice
+         */
+//        UserController userController = new UserControllerImpl();
+//        userController.register(1,"glasgow","123456");
+
+        /**
+         * teacher
+         */
+//        CandidateTeacherController candidateTeacherController = new CandidateTeacherControllerImpl(userController.login("00008",""));
+//        candidateTeacherController.showTrainingList();
+        /**
+         * Administrator
+         */
+        AdministratorController administratorController = new AdministratorControllerImpl();
+//        TrainingList mTrainingList = new TrainingList();
+//        mTrainingList.setGUID("glasgow_2");
+//        List<String> mList = new ArrayList<String>();
+//        mList.add("math");
+//        mTrainingList.setSubject(mList);
+//        administratorController.uploadTrainingList(mTrainingList);
+       /** administratorController.downloadTrainingList("glasgow");
+    }*/
 }
