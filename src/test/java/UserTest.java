@@ -14,7 +14,6 @@ import entity.User;
 import entity.userimpl.Administrator;
 import entity.userimpl.CandidateTeacher;
 import entity.userimpl.ClassDirector;
-import org.junit.Test;
 import service.impl.ClassDirectorServiceImpl;
 import utils.FileLoader;
 import utils.JsonData;
@@ -33,6 +32,9 @@ public class UserTest {
      * to load all information into json doc.
      * */
     public static void main(String[] args) {
+        JsonData.GetUserAccount();
+        JsonData.GetCandidateTeacher();
+        JsonData.GetClassDirector();
         /**
          * userservice
          */
@@ -54,7 +56,7 @@ public class UserTest {
         mList.add("math");
         mTrainingList.setSubject(mList);
         administratorController.uploadTrainingList(mTrainingList);
-        administratorController.downloadTrainingList("glasgow");
+        administratorController.downloadTrainingList("glasgow_2");
         /**Class Director*/
         ClassDirectorController classDirectorController=new ClassDirectorControllerImpl();
         classDirectorController.enterRecruitmentList();
