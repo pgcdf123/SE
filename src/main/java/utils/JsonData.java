@@ -116,5 +116,17 @@ public class JsonData {
         }
         return path;
     }
+    public static User findByID(String GUID)
+    {
+        User tempUser=null;
+        for(User user:UserAccount)
+        {
+            if(user.getGUID().equals(GUID))
+            {
+                tempUser=user;
+            }
+        }
 
+        return tempUser;
+    }
 }

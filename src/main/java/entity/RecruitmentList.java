@@ -4,6 +4,7 @@ public class RecruitmentList {
 
     private String GUID;
     private String Subject;
+    private int Quantity;
 
     public String getGUID() {
         return GUID;
@@ -19,5 +20,13 @@ public class RecruitmentList {
 
     public void setSubject(String subject) {
         Subject = subject;
+    }
+
+    public int getQuantity() {
+        return Quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        Quantity = quantity;
     }
 }

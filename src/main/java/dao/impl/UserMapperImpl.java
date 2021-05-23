@@ -19,14 +19,7 @@ public class UserMapperImpl implements UserMapper {
     }
     public User findByGUID(String GUID) {
         User userInformation=null;
-        for(User eachuser : JsonData.GetUserAccount())
-        {
-            if(GUID.equals(eachuser.getGUID()))
-            {
-                userInformation=eachuser;
-                break;
-            }
-        }
+        userInformation=JsonData.findByID(GUID);
         return  userInformation;
     }
 }

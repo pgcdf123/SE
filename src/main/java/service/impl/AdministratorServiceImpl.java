@@ -15,7 +15,6 @@ import utils.JsonData;
 public class AdministratorServiceImpl implements AdministratorService {
 
     RecruitmentListMapper recruitmentListMapper = new RecruitmentListMapperImpl();
-    UserMapper userMapper = new UserMapperImpl();
     TrainingListMapper trainingListMapper = new TrainingListMapperImpl();
 
 
@@ -27,7 +26,7 @@ public class AdministratorServiceImpl implements AdministratorService {
 
     @Override
     public CandidateTeacher chooseCandidateTeacher(String GUID) {
-        return (CandidateTeacher) userMapper.findByGUID(GUID);
+        return (CandidateTeacher) JsonData.findByID(GUID);
     }
 
     @Override

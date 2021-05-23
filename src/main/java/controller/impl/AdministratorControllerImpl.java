@@ -13,6 +13,7 @@ public class AdministratorControllerImpl implements AdministratorController {
     AdministratorService administratorService = new AdministratorServiceImpl();
 
 
+
     public RecruitmentList downloadRecruitmentList(String GUID) {
         return administratorService.downloadRecruitmentList(GUID);
     }

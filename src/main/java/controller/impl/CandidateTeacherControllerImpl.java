@@ -5,6 +5,7 @@ import entity.TrainingList;
 import entity.User;
 import service.impl.CandidateTeacherServiceImpl;
 import service.CandidateTeacherService;
+import utils.JsonData;
 
 import java.util.List;
 
@@ -13,8 +14,8 @@ public class CandidateTeacherControllerImpl implements CandidateTeacherControlle
     CandidateTeacherService candidateTeacherService = new CandidateTeacherServiceImpl();
     private User user;
 
-    public CandidateTeacherControllerImpl(User user){
-        this.user = user;
+    public CandidateTeacherControllerImpl(String GUID){
+        user= JsonData.findByID(GUID);
     }
 
     public void showTrainingList(){
