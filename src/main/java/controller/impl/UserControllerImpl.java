@@ -15,31 +15,13 @@ public class UserControllerImpl implements UserController {
     UserService userService = new UserServiceImpl();
     UserMapper userMapper = new UserMapperImpl();
     @Override
-    public void register(int id, String GUID, String password) {
-        if(id == 1){
-            User user = new Administrator();
-            user.setId(id);
-            user.setGUID(GUID);
-            user.setPassword(password);
-            userService.register(user);
-            System.out.println("Administrator, register successfully");
-        }else if (id == 2){
-            User user = new CandidateTeacher();
-            user.setId(id);
-            user.setGUID(GUID);
-            user.setPassword(password);
-            userService.register(user);
-            System.out.println("CandidateTeacher, register successfully");
-        }else if(id == 3){
-            User user = new ClassDirector();
-            user.setId(id);
-            user.setGUID(GUID);
-            user.setPassword(password);
-            userService.register(user);
-            System.out.println("ClassDirector, register successfully");
-        }else {
-            System.out.println("registration failed");
-        }
+    public int register(int id, String GUID, String password) {
+        User user = new Administrator();
+        user.setId(id);
+        user.setGUID(GUID);
+        user.setPassword(password);
+        userService.register(user);
+        return id;
     }
 
     @Override

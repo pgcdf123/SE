@@ -14,7 +14,7 @@ public class ClassDirectorControllerImpl implements ClassDirectorController {
     ClassDirectorService classDirectorService = new ClassDirectorServiceImpl();
     private User user;
 
-    public void ClassDirectorControllerImpl(String GUID){
+    public ClassDirectorControllerImpl(String GUID){
         user=JsonData.findByID(GUID);
     }
 

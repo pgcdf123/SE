@@ -18,12 +18,9 @@ public class CandidateTeacherControllerImpl implements CandidateTeacherControlle
         user= JsonData.findByID(GUID);
     }
 
-    public void showTrainingList(){
+    public List<String > showTrainingList(){
         TrainingList trainingList = candidateTeacherService.downloadTrainingList(user.getGUID());
         List<String> subject = trainingList.getSubject();
-        System.out.println("Your training list is:");
-        for(String it:subject){
-            System.out.println(it);
-        }
+        return subject;
     }
 }

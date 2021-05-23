@@ -25,13 +25,11 @@ public class AdministratorControllerImpl implements AdministratorController {
 
     @Override
     public void uploadTrainingList(TrainingList trainingList) {
-        System.out.println("成功");
         administratorService.uploadTrainingList(trainingList);
     }
 
     @Override
     public TrainingList downloadTrainingList(String GUID) {
-        System.out.println("downloadTrainingList successfully");
         System.out.println(administratorService.downloadTrainingList(GUID).getSubject());
         return administratorService.downloadTrainingList(GUID);
     }

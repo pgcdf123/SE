@@ -1,5 +1,7 @@
 package controller;
 
+import java.util.List;
+
 public interface CandidateTeacherController {
-   public void showTrainingList();
+   public List<String> showTrainingList();
 }
